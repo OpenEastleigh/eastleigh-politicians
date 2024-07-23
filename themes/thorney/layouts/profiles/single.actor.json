@@ -1,0 +1,35 @@
+{{- $wcivf := urls.Parse .Params.wcivf -}}
+{
+    "@context": [
+        "https://www.w3.org/ns/activitystreams",
+        {
+            "schema": "http://schema.org#",
+            "PropertyValue": "schema:PropertyValue",
+            "value": "schema:value"
+        },
+        {
+            "discoverable": "http://joinmastodon.org/ns#discoverable"
+        }
+    ],
+    "id": {{ urls.JoinPath (absURL "") .Path | jsonify }},
+    "type": "Person",
+    "inbox": {{ urls.JoinPath (absURL "") .Path "inbox.json" | jsonify }},
+    "outbox": {{ urls.JoinPath (absURL "") .Path "feed.json" | jsonify }},
+    "preferredUsername": "{{ .Params.username }}",
+    "name": "{{ .Title }}",
+    "summary": "Just testing!",
+    "url": {{ urls.JoinPath (absURL "") .Path | jsonify }},
+    "discoverable": true,
+    "icon": {
+        "type": "Image",
+        "mediaType": "image/png",
+        "url": {{ urls.JoinPath (absURL "") .Path "avatar.png" | jsonify }}
+    },
+    "attachment": [
+        {
+            "type": "PropertyValue",
+            "name": "WCIVF",
+            "value": "<a href=\"{{ .Params.wcivf }}\" target=\"_blank\" rel=\"nofollow noopener noreferrer me\" translate=\"no\"><span class=\"invisible\">{{ $wcivf.Scheme }}</span><span class=\"\">{{ $wcivf.Host }}{{ $wcivf.Path }}</span><span class=\"invisible\"></span></a>"
+        }
+    ]
+}

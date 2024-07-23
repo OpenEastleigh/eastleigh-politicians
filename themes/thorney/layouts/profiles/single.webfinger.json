@@ -1,0 +1,21 @@
+{{- $u := urls.Parse .Site.BaseURL -}}
+{
+    "subject": "acct:{{ .Params.username }}@{{ $u.Hostname }}",
+    "aliases":
+    [
+        {{ urls.JoinPath (absURL "") .Path | jsonify }}
+    ],
+    "links":
+    [
+        {
+            "rel": "http://webfinger.net/rel/profile-page",
+            "type": "text/html",
+            "href": {{ urls.JoinPath (absURL "") .Path | jsonify }}
+        },
+        {
+            "rel": "self",
+            "type": "application/activity+json",
+            "href": {{ urls.JoinPath (absURL "") .Path "actor.json" | jsonify }}
+        }
+    ]
+}

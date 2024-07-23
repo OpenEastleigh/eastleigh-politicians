@@ -1,0 +1,31 @@
+baseURL: https://politicians.openeastleigh.uk/
+languageCode: en-gb
+title: Eastleigh politicians
+theme: thorney
+
+disableKinds:
+  - rss
+  - taxonomy
+  - term
+
+mediaTypes:
+  text/netlify:
+    delimiter: ''
+
+outputFormats:
+  actor:
+    baseName: actor
+    isPlainText: true
+    mediaType: application/json
+  redirects:
+    baseName: _redirects
+    mediaType: text/netlify
+  webfinger:
+    baseName: webfinger
+    isPlainText: true
+    mediaType: application/json
+
+outputs:
+  home:
+  - html
+  - redirects

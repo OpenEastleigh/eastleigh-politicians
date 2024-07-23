@@ -1,0 +1,5 @@
+{{- $u := urls.Parse .Site.BaseURL -}}
+{{- $profiles := where site.RegularPages "Type" "profiles" -}}
+{{- range $profiles -}}
+/.well_known/webfinger resource=acct:{{ .Params.username }}@{{ $u.Hostname }}  {{ urls.JoinPath .Path "webfinger.json" }}  200!{{ printf "\n" }}
+{{- end -}}
