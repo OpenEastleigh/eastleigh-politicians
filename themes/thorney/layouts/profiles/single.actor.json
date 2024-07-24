@@ -11,10 +11,9 @@
             "discoverable": "http://joinmastodon.org/ns#discoverable"
         }
     ],
-    "id": {{ urls.JoinPath (absURL "") .Path | jsonify }},
+    "id": {{ urls.JoinPath (absURL "") .Path "actor.json" | jsonify }},
     "type": "Person",
     "inbox": {{ urls.JoinPath (absURL "") .Path "inbox.json" | jsonify }},
-    "outbox": {{ urls.JoinPath (absURL "") .Path "feed.json" | jsonify }},
     "preferredUsername": "{{ .Params.username }}",
     "name": "{{ .Title }}",
     "summary": "Just testing!",
