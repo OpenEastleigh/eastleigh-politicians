@@ -6,6 +6,11 @@
   HUGO_VERSION = "0.129.0"
 
 [[headers]]
+  for = "/.well-known/webfinger"
+  [headers.values]
+    Content-Type = "application/jrd+json; charset=utf-8"
+
+[[headers]]
   for = "/profiles/*/webfinger.json"
   [headers.values]
     Content-Type = "application/jrd+json; charset=utf-8"
