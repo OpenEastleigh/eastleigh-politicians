@@ -4,3 +4,13 @@
 
 [build.environment]
   HUGO_VERSION = "0.129.0"
+
+[[headers]]
+  for = "/profiles/*/webfinger.json"
+  [headers.values]
+    Content-Type = "application/jrd+json; charset=utf-8"
+
+[[headers]]
+  for = "/profiles/*/actor.json"
+  [headers.values]
+    Content-Type = "application/activity+json; charset=utf-8"
