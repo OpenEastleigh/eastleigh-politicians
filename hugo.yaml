@@ -21,6 +21,7 @@ parties:
   - reformuk
 
 roles:
+  - ebc
   - mp
 
 mediaTypes:
