@@ -8,7 +8,10 @@
             "value": "schema:value"
         },
         {
-            "discoverable": "http://joinmastodon.org/ns#discoverable"
+            "as": "https://www.w3.org/ns/activitystreams#",
+            "toot": "http://joinmastodon.org/ns#",
+            "discoverable": "toot:discoverable",
+            "manuallyApprovesFollowers": "as:manuallyApprovesFollowers"
         }
     ],
     "id": {{ urls.JoinPath (absURL "") .Path "actor.json" | jsonify }},
@@ -16,13 +19,14 @@
     "inbox": {{ urls.JoinPath (absURL "") .Path "inbox.json" | jsonify }},
     "preferredUsername": "{{ .Params.username }}",
     "name": "{{ .Title }}",
-    "summary": "Just testing!",
+    "summary": "&#x26A0; This profile is part of the Open Eastleigh political directory and follow requests will be rejected.",
     "url": {{ urls.JoinPath (absURL "") .Path | jsonify }},
     "discoverable": true,
+    "manuallyApprovesFollowers": true,
     "icon": {
         "type": "Image",
         "mediaType": "image/png",
-        "url": {{ urls.JoinPath (absURL "") .Path "avatar.png" | jsonify }}
+        "url": {{ urls.JoinPath (absURL "images") "avatar.png" | jsonify }}
     },
     "attachment": [
         {

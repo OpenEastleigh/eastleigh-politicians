@@ -3,27 +3,42 @@ languageCode: en-gb
 title: Eastleigh politicians
 theme: thorney
 
+sectionPagesMenu: main
+
 disableKinds:
   - rss
-  - taxonomy
-  - term
+
+# TODO: taxonomies cannot be defined in themes?
+taxonomies:
+  party: parties
+  role: roles
+
+parties:
+  - conservative
+  - green
+  - labour
+  - libdem
+  - reformuk
+
+roles:
+  - mp
 
 mediaTypes:
   text/netlify:
     delimiter: ''
 
 outputFormats:
-  actor:
-    baseName: actor
-    isPlainText: true
-    mediaType: application/json
+  # actor:
+  #   baseName: actor
+  #   isPlainText: true
+  #   mediaType: application/json
   redirects:
     baseName: _redirects
     mediaType: text/netlify
-  webfinger:
-    baseName: webfinger
-    isPlainText: true
-    mediaType: application/json
+  # webfinger:
+  #   baseName: webfinger
+  #   isPlainText: true
+  #   mediaType: application/json
 
 outputs:
   home:
