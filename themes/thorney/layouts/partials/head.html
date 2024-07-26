@@ -4,5 +4,5 @@
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
 {{ if and .IsPage (eq .Section "profiles") }}
-<link href="{{ urls.JoinPath (absURL "") .Path "actor.json" }}" rel="me">
+<link href="{{ urls.JoinPath (absURL "") .Path }}" rel="me">
 {{ end }}
