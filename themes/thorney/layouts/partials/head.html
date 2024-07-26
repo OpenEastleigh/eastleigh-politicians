@@ -3,3 +3,6 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
+{{ if and .IsPage (eq .Section "profiles") }}
+<link href="{{ urls.JoinPath (absURL "") .Path "actor.json" }}" rel="me">
+{{ end }}

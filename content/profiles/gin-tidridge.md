@@ -3,7 +3,7 @@ date: '2024-07-25T19:21:07Z'
 draft: false
 title: 'Gin Tidridge'
 parties:
-- Independent
+- independent
 roles:
 - ebc
 params:
