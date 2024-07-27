@@ -16,7 +16,7 @@
         }
     ],
     "id": {{ urls.JoinPath (absURL "") .Path "actor.json" | jsonify }},
-    "type": "Person",
+    "type": "Service",
     "inbox": {{ urls.JoinPath (absURL "") .Path "inbox.json" | jsonify }},
     "preferredUsername": "{{ .Params.username }}",
     "name": "{{ .Title }}",
