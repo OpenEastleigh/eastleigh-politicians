@@ -10,6 +10,6 @@ roles:
 - ebc
 params:
     username: 'RichardGomer'
-    mastodon: 'https://tech.lgbt/@richardgomer@tech.lgbt'
+    mastodon: 'https://tech.lgbt/@richardgomer'
     wcivf: 'https://whocanivotefor.co.uk/person/38689/richard-charles-gomer'
 ---
