@@ -8,5 +8,5 @@ roles:
 - ebc
 params:
     username: 'KarenCaws'
-    wcivf: https://whocanivotefor.co.uk/person/98105/karen-louise-caws
+    wcivf: 'https://whocanivotefor.co.uk/person/98105/karen-louise-caws'
 ---

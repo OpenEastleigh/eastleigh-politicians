@@ -2,11 +2,11 @@ baseURL: https://example.org/
 languageCode: en-US
 title: My New Hugo Site
 
-# menus:
-#   main:
-#     - name: Home
-#       pageRef: /
-#       weight: 10
+menus:
+  main:
+    - name: Home
+      pageRef: /
+      weight: 10
 #     - name: Posts
 #       pageRef: /posts
 #       weight: 20

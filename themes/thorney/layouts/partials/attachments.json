@@ -1,0 +1,20 @@
+{{- /*
+For a given profile, renders a list of ActivityPub actor attachments.
+
+@example: {{ partial "attachments.json" . }}
+*/}}
+
+"attachment": [
+  {{- partial "inline/attachments/attachment.json" (dict "name" "Open Eastleigh" "url" ( urls.Parse (urls.JoinPath (absURL "") .Path) )) }},
+  {{- partial "inline/attachments/attachment.json" (dict "name" "Who Can I Vote For?" "url" ( urls.Parse .Params.wcivf )) }}{{- if isset .Params "mastodon" }},
+    {{- partial "inline/attachments/attachment.json" (dict "name" "Mastodon" "url" ( urls.Parse .Params.mastodon )) }}
+  {{- end }}
+]
+
+{{- define "partials/inline/attachments/attachment.json" }}
+  {
+    "type": "PropertyValue",
+    "name": "{{ .name }}",
+    "value": "<a href=\"{{ .url.String }}\" target=\"_blank\" rel=\"nofollow noopener noreferrer me\" translate=\"no\"><span class=\"invisible\">{{ .url.Scheme }}</span><span class=\"\">{{ .url.Host }}{{ .url.Path }}</span><span class=\"invisible\"></span></a>"
+  }
+{{- end }}

@@ -8,5 +8,5 @@ roles:
 - ebc
 params:
     username: 'LouiseParkerJones'
-    wcivf: https://whocanivotefor.co.uk/person/26845/louise-anne-parker-jones
+    wcivf: 'https://whocanivotefor.co.uk/person/26845/louise-anne-parker-jones'
 ---

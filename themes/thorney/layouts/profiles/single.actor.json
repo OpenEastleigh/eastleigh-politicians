@@ -1,5 +1,3 @@
-{{- $profile := urls.Parse (urls.JoinPath (absURL "") .Path) -}}
-{{- $wcivf := urls.Parse .Params.wcivf -}}
 {
     "@context": [
         "https://www.w3.org/ns/activitystreams",
@@ -29,16 +27,5 @@
         "mediaType": "image/png",
         "url": {{ urls.JoinPath (absURL "images") "avatar.png" | jsonify }}
     },
-    "attachment": [
-        {
-            "type": "PropertyValue",
-            "name": "Open Eastleigh",
-            "value": "<a href=\"{{ $profile.String }}\" target=\"_blank\" rel=\"nofollow noopener noreferrer me\" translate=\"no\"><span class=\"invisible\">{{ $profile.Scheme }}</span><span class=\"\">{{ $profile.Host }}{{ $profile.Path }}</span><span class=\"invisible\"></span></a>"
-        },
-        {
-            "type": "PropertyValue",
-            "name": "Who Can I Vote For?",
-            "value": "<a href=\"{{ $wcivf.String }}\" target=\"_blank\" rel=\"nofollow noopener noreferrer me\" translate=\"no\"><span class=\"invisible\">{{ $wcivf.Scheme }}</span><span class=\"\">{{ $wcivf.Host }}{{ $wcivf.Path }}</span><span class=\"invisible\"></span></a>"
-        }
-    ]
+    {{- partial "attachments.json" . }}
 }

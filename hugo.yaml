@@ -3,26 +3,33 @@ languageCode: en-gb
 title: Eastleigh politicians
 theme: thorney
 
-sectionPagesMenu: main
-
 disableKinds:
   - rss
 
 # TODO: taxonomies cannot be defined in themes?
 taxonomies:
   party: parties
+  platform: platforms
   role: roles
 
-parties:
-  - conservative
-  - green
-  - labour
-  - libdem
-  - reformuk
+# TODO: can empty pages be generated for taxonomies?
+# parties:
+#   - conservative
+#   - green
+#   - labour
+#   - libdem
+#   - reformuk
 
-roles:
-  - ebc
-  - mp
+# platforms:
+#   - facebook
+#   - instagram
+#   - mastodon
+#   - threads
+#   - youtube
+
+# roles:
+#   - ebc
+#   - mp
 
 mediaTypes:
   text/netlify:

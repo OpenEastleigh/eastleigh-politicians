@@ -3,10 +3,27 @@ date: '{{ .Date }}'
 draft: true
 title: '{{ replace .File.ContentBaseName `-` ` ` | title }}'
 parties:
-- unknown
+- conservative
+- green
+- independent
+- labour
+- libdem
+- reformuk
+platforms:
+- facebook
+- instagram
+- mastodon
+- threads
+- youtube
 roles:
-- unknown
+- ebc
+- mp
 params:
     username: '{{ replace (.File.ContentBaseName | title) `-` `` }}'
-    wcivf: https://whocanivotefor.co.uk/
+    # facebook: ''
+    # instagram: ''
+    # mastodon: ''
+    # threads: ''
+    # youtube: ''
+    # wcivf: 'https://whocanivotefor.co.uk/'
 ---

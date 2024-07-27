@@ -3,7 +3,9 @@
     "subject": "acct:{{ .Params.username }}@{{ $u.Hostname }}",
     "aliases":
     [
-        {{ urls.JoinPath (absURL "") .Path | jsonify }}
+        {{ urls.JoinPath (absURL "") .Path | jsonify }}{{- if isset .Params "mastodon" }},
+        {{ .Params.mastodon | jsonify }}
+        {{- end }}
     ],
     "links":
     [

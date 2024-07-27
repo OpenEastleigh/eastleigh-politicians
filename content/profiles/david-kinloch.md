@@ -8,5 +8,5 @@ roles:
 - ebc
 params:
     username: 'DavidKinloch'
-    wcivf: https://whocanivotefor.co.uk/person/75552/david-geoffrey-lan-kinloch
+    wcivf: 'https://whocanivotefor.co.uk/person/75552/david-geoffrey-lan-kinloch'
 ---

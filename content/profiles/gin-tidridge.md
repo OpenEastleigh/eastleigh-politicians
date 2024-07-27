@@ -8,5 +8,5 @@ roles:
 - ebc
 params:
     username: 'GinTidridge'
-    wcivf: https://whocanivotefor.co.uk/person/38631/gin-tidridge
+    wcivf: 'https://whocanivotefor.co.uk/person/38631/gin-tidridge'
 ---
