@@ -8,5 +8,6 @@ roles:
 - ebc
 params:
     username: 'DavidKinloch'
+    ebc: 'https://meetings.eastleigh.gov.uk/mgUserInfo.aspx?UID=50000685'
     wcivf: 'https://whocanivotefor.co.uk/person/75552/david-geoffrey-lan-kinloch'
 ---

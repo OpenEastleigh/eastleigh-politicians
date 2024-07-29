@@ -5,9 +5,18 @@ For a given profile, renders a list of ActivityPub actor attachments.
 */}}
 
 "attachment": [
-  {{- partial "inline/attachments/attachment.json" (dict "name" "Open Eastleigh" "url" ( urls.Parse (urls.JoinPath (absURL "") .Path) )) }},
-  {{- partial "inline/attachments/attachment.json" (dict "name" "Who Can I Vote For?" "url" ( urls.Parse .Params.wcivf )) }}{{- if isset .Params "mastodon" }},
+  {{- partial "inline/attachments/attachment.json" (dict "name" "Open Eastleigh" "url" ( urls.Parse (urls.JoinPath (absURL "") .Path) )) }}
+  {{- if isset .Params "mastodon" }},
     {{- partial "inline/attachments/attachment.json" (dict "name" "Mastodon" "url" ( urls.Parse .Params.mastodon )) }}
+  {{- end }}
+  {{- if isset .Params "wcivf" }},
+    {{- partial "inline/attachments/attachment.json" (dict "name" "Who Can I Vote For?" "url" ( urls.Parse .Params.wcivf )) }}
+  {{- end }}
+  {{- if isset .Params "parliament" }},
+    {{- partial "inline/attachments/attachment.json" (dict "name" "UK Parliament" "url" ( urls.Parse .Params.parliament )) }}
+  {{- end }}
+  {{- if isset .Params "ebc" }},
+    {{- partial "inline/attachments/attachment.json" (dict "name" "Eastleigh Borough Council" "url" ( urls.Parse .Params.ebc )) }}
   {{- end }}
 ]
 

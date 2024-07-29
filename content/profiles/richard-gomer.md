@@ -10,6 +10,7 @@ roles:
 - ebc
 params:
     username: 'RichardGomer'
+    ebc: 'https://meetings.eastleigh.gov.uk/mgUserInfo.aspx?UID=500000119'
     mastodon: 'https://tech.lgbt/@richardgomer'
     wcivf: 'https://whocanivotefor.co.uk/person/38689/richard-charles-gomer'
 ---

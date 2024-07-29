@@ -20,6 +20,8 @@ roles:
 - mp
 params:
     username: '{{ replace (.File.ContentBaseName | title) `-` `` }}'
+    # ebc: ''
+    # parliament: ''
     # facebook: ''
     # instagram: ''
     # mastodon: ''

@@ -8,5 +8,6 @@ roles:
 - mp
 params:
     username: 'PaulHolmes'
+    parliament: 'https://members.parliament.uk/member/4803/contact'
     wcivf: 'https://whocanivotefor.co.uk/person/4209/paul-holmes'
 ---
