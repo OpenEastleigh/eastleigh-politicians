@@ -1,6 +1,6 @@
 ---
 date: '2024-07-29T12:05:24Z'
-draft: true
+draft: false
 title: 'Rupert Kyrle'
 parties:
 - libdem
