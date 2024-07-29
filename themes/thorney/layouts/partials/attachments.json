@@ -24,6 +24,6 @@ For a given profile, renders a list of ActivityPub actor attachments.
   {
     "type": "PropertyValue",
     "name": "{{ .name }}",
-    "value": "<a href=\"{{ .url.String }}\" target=\"_blank\" rel=\"nofollow noopener noreferrer me\" translate=\"no\"><span class=\"invisible\">{{ .url.Scheme }}</span><span class=\"\">{{ .url.Host }}{{ .url.Path }}</span><span class=\"invisible\"></span></a>"
+    "value": "<a href=\"{{ .url.String }}\" target=\"_blank\" rel=\"nofollow noopener noreferrer me\" translate=\"no\"><span class=\"invisible\">{{ .url.Scheme }}</span><span class=\"\">{{ .url.Host }}{{ .url.RequestURI }}</span><span class=\"invisible\"></span></a>"
   }
 {{- end }}
