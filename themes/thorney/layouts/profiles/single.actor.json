@@ -28,7 +28,7 @@
     "inbox": {{ urls.JoinPath (absURL "") .Path "inbox.json" | jsonify }},
     "preferredUsername": "{{ .Params.username }}",
     "name": "{{ .Title }}",
-    "summary": "&#x26A0; This profile is part of the Open Eastleigh political directory and follow requests will be rejected.",
+    "summary": "&#x26A0; This automated profile is part of the Open Eastleigh political directory and follow requests will be rejected.",
     "url": {{ urls.JoinPath (absURL "") .Path | jsonify }},
     "discoverable": true,
     "manuallyApprovesFollowers": true,
