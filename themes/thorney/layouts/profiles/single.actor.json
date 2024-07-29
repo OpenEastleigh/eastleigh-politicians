@@ -1,3 +1,13 @@
+{{- $banner := "grey-banner.jpg" -}}
+{{- if in .Site.Taxonomies.parties.conservative.Pages .Page -}}
+{{- $banner = "blue-banner.jpg" -}}
+{{- else if in .Site.Taxonomies.parties.green.Pages .Page -}}
+{{- $banner = "green-banner.jpg" -}}
+{{- else if in .Site.Taxonomies.parties.labour.Pages .Page -}}
+{{- $banner = "red-banner.jpg" -}}
+{{- else if in .Site.Taxonomies.parties.libdem.Pages .Page -}}
+{{- $banner = "orange-banner.jpg" -}}
+{{- end -}}
 {
     "@context": [
         "https://www.w3.org/ns/activitystreams",
@@ -26,6 +36,11 @@
         "type": "Image",
         "mediaType": "image/png",
         "url": {{ urls.JoinPath (absURL "images") "avatar.png" | jsonify }}
+    },
+    "image": {
+        "type": "Image",
+        "mediaType": "image/jpeg",
+        "url": {{ urls.JoinPath (absURL "images") $banner | jsonify }}
     },
     {{- partial "attachments.json" . }}
 }
