@@ -10,6 +10,7 @@ parties:
 - libdem
 - reformuk
 platforms:
+- bluesky
 - facebook
 - instagram
 - mastodon
@@ -22,6 +23,7 @@ params:
     username: '{{ replace (.File.ContentBaseName | title) `-` `` }}'
     # ebc: ''
     # parliament: ''
+    # bluesky: ''
     # facebook: ''
     # instagram: ''
     # mastodon: ''
