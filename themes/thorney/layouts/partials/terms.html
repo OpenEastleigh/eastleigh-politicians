@@ -16,7 +16,12 @@ For a given taxonomy, renders a list of terms assigned to the page.
     <div>{{ $label }}:</div>
     <ul>
       {{- range . }}
-        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+      {{- $page_param := .Params.page_param }}
+      {{- if ne $page_param nil }}
+      <li><a href="{{ index $page.Params $page_param }}">{{ .LinkTitle }}</a></li>
+      {{- else }}
+      <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
       {{- end }}
     </ul>
   </div>

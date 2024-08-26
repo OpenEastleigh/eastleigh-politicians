@@ -7,12 +7,12 @@ menus:
     - name: Home
       pageRef: /
       weight: 10
-#     - name: Posts
-#       pageRef: /posts
-#       weight: 20
-#     - name: Tags
-#       pageRef: /tags
-#       weight: 30
+    - name: MPs
+      pageRef: /roles/mp
+      weight: 20
+    - name: Social media
+      pageRef: /platforms
+      weight: 30
 
 module:
   hugoVersion:

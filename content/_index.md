@@ -4,6 +4,4 @@ draft: false
 title: Home
 ---
 
-Laborum voluptate pariatur ex culpa magna nostrud est incididunt fugiat
-pariatur do dolor ipsum enim. Consequat tempor do dolor eu. Non id id anim anim
-excepteur excepteur pariatur nostrud qui irure ullamco.
+Welcome to the Eastleigh political directory! This is an experiment to make it easier to find local politicians on social media now that Twitter no longer exists. There is only a very incomplete list of politicians so far but hopefully that will change soon. Well, soonish!
