@@ -17,6 +17,7 @@ platforms:
 - threads
 - youtube
 roles:
+- eastleigh-tc
 - ebc
 - mp
 params:
