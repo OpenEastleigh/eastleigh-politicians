@@ -8,11 +8,9 @@ platforms:
 - bluesky
 - facebook
 roles:
-- ebc
 - mp
 params:
     username: 'LizJarvis'
-    ebc: 'https://meetings.eastleigh.gov.uk/mgUserInfo.aspx?UID=50000739'
     parliament: 'https://members.parliament.uk/member/5040/contact'
     bluesky: 'https://bsky.app/profile/lizjarvis.bsky.social'
     facebook: 'https://www.facebook.com/LizJarvisLD'
